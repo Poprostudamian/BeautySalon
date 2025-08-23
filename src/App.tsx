@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import StickyBookingButton from './components/StickyBookingButton';
 import Home from './pages/Home';
 import Services from './pages/Services';
 import Gallery from './pages/Gallery';
@@ -27,6 +28,7 @@ function App() {
           </Routes>
         </main>
         <Footer />
+        <StickyBookingButton />
       </div>
     </Router>
   );
