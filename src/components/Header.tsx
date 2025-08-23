@@ -7,12 +7,12 @@ const Header = () => {
   const location = useLocation();
 
   const navigation = [
-    { name: 'Home', href: '/' },
-    { name: 'Services', href: '/services' },
-    { name: 'Gallery', href: '/gallery' },
-    { name: 'About', href: '/about' },
-    { name: 'Reviews', href: '/reviews' },
-    { name: 'Contact', href: '/contact' },
+    { name: 'Strona Główna', href: '/' },
+    { name: 'Usługi', href: '/services' },
+    { name: 'Galeria', href: '/gallery' },
+    { name: 'O Nas', href: '/about' },
+    { name: 'Opinie', href: '/reviews' },
+    { name: 'Kontakt', href: '/contact' },
   ];
 
   const isActive = (href: string) => location.pathname === href;
@@ -49,14 +49,14 @@ const Header = () => {
             to="/booking"
             className="hidden md:inline-flex bg-pink-500 text-white px-6 py-2 rounded-full font-semibold hover:bg-pink-600 transition-colors duration-200"
           >
-            Book Now
+            Zarezerwuj
           </Link>
 
           {/* Mobile menu button */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             className="md:hidden"
-            aria-label="Toggle menu"
+            aria-label="Przełącz menu"
           >
             {isMenuOpen ? (
               <X className="h-6 w-6" />
@@ -89,7 +89,7 @@ const Header = () => {
                 onClick={() => setIsMenuOpen(false)}
                 className="block w-full text-center bg-pink-500 text-white px-3 py-2 rounded-md font-semibold hover:bg-pink-600 transition-colors duration-200 mt-4"
               >
-                Book Now
+                Zarezerwuj
               </Link>
             </div>
           </div>
