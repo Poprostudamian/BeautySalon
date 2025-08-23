@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import StickyBookingButton from './components/StickyBookingButton';
+import ScrollToTop from './components/ScrollToTop';
 import Home from './pages/Home';
 import Services from './pages/Services';
 import Gallery from './pages/Gallery';
@@ -15,6 +16,7 @@ function App() {
   return (
     <Router>
       <div className="min-h-screen bg-white">
+        <ScrollToTop />
         <Header />
         <main>
           <Routes>
