@@ -6,36 +6,36 @@ const Home = () => {
   const features = [
     {
       icon: <Shield className="h-8 w-8 text-pink-500" />,
-      title: 'Hygiene First',
-      description: 'All tools sterilized, single-use items, and highest cleanliness standards'
+      title: 'Higiena Przede Wszystkim',
+      description: 'Wszystkie narzędzia sterylizowane, jednorazowe przedmioty i najwyższe standardy czystości'
     },
     {
       icon: <Users className="h-8 w-8 text-pink-500" />,
-      title: 'Expert Technicians',
-      description: 'Licensed professionals with years of experience and ongoing education'
+      title: 'Ekspertki z Licencjami',
+      description: 'Licencjonowane specjalistki z wieloletnim doświadczeniem i ciągłym szkoleniem'
     },
     {
       icon: <Award className="h-8 w-8 text-pink-500" />,
-      title: 'Premium Products',
-      description: 'Only the finest polishes, gels, and treatments from trusted brands'
+      title: 'Produkty Premium',
+      description: 'Tylko najlepsze lakiery, żele i zabiegi od zaufanych marek'
     }
   ];
 
   const testimonials = [
     {
-      name: 'Sarah Johnson',
+      name: 'Anna Kowalska',
       rating: 5,
-      text: 'Absolutely amazing service! My nails have never looked better. The staff is so professional and the salon is spotless.'
+      text: 'Absolutnie niesamowita obsługa! Moje paznokcie nigdy nie wyglądały lepiej. Personel jest tak profesjonalny, a salon nienagannie czysty.'
     },
     {
-      name: 'Maria Garcia',
+      name: 'Maria Nowak',
       rating: 5,
-      text: 'I\'ve been coming here for months and I\'m always impressed. The nail art is incredible and my manicures last for weeks!'
+      text: 'Przychodzę tu od miesięcy i zawsze jestem pod wrażeniem. Nail art jest niesamowity, a moje manicure trzymają się tygodniami!'
     },
     {
-      name: 'Jessica Chen',
+      name: 'Katarzyna Wiśniewska',
       rating: 5,
-      text: 'Finally found my nail salon! The atmosphere is so relaxing and the results are always perfect. Highly recommended!'
+      text: 'W końcu znalazłam swój salon paznokci! Atmosfera jest tak relaksująca, a efekty zawsze perfekcyjne. Gorąco polecam!'
     }
   ];
 
@@ -47,44 +47,34 @@ const Home = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-                Luxury Nail Care 
-                <span className="text-pink-500 block">You Deserve</span>
+                Luksusowa Pielęgnacja 
+                <span className="text-pink-500 block">Którą Zasługujesz</span>
               </h1>
               <p className="text-xl text-gray-600 mb-8">
-                Experience the finest in nail artistry and pampering at Luxe Nails. 
-                Our expert technicians use premium products to create stunning, long-lasting results.
+                Doświadcz najlepszego w sztuce paznokci i rozpieszczaniu w Luxe Nails. 
+                Nasze ekspertki używają produktów premium, aby stworzyć oszałamiające, trwałe rezultaty.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4">
+              <div className="flex space-x-4">
                 <Link
                   to="/booking"
-                  className="bg-pink-500 text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-pink-600 transition-colors duration-200 text-center"
+                  className="bg-pink-500 text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-pink-600 transition-colors duration-200"
                 >
-                  Book Appointment
+                  Zarezerwuj Termin
                 </Link>
                 <Link
                   to="/services"
-                  className="border-2 border-pink-500 text-pink-500 px-8 py-4 rounded-full font-semibold text-lg hover:bg-pink-500 hover:text-white transition-colors duration-200 text-center"
+                  className="border-2 border-pink-500 text-pink-500 px-8 py-4 rounded-full font-semibold text-lg hover:bg-pink-500 hover:text-white transition-colors duration-200"
                 >
-                  View Services
+                  Zobacz Usługi
                 </Link>
               </div>
             </div>
             <div className="relative">
               <img
-                src="https://images.pexels.com/photos/3997390/pexels-photo-3997390.jpeg?auto=compress&cs=tinysrgb&w=600"
-                alt="Beautiful nail art"
+                src="https://images.pexels.com/photos/3997991/pexels-photo-3997991.jpeg?auto=compress&cs=tinysrgb&w=600"
+                alt="Profesjonalny manicure"
                 className="rounded-2xl shadow-2xl"
               />
-              <div className="absolute -bottom-6 -left-6 bg-white p-4 rounded-xl shadow-lg">
-                <div className="flex items-center space-x-2">
-                  <div className="flex text-yellow-400">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="h-5 w-5 fill-current" />
-                    ))}
-                  </div>
-                  <span className="font-semibold text-gray-900">500+ Reviews</span>
-                </div>
-              </div>
             </div>
           </div>
         </div>
@@ -95,10 +85,10 @@ const Home = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Why Choose Luxe Nails?
+              Dlaczego Warto Nas Wybrać
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              We're committed to providing exceptional service and results that exceed your expectations
+              Jesteśmy zobowiązani do zapewnienia wyjątkowej obsługi i rezultatów, które przekraczają Twoje oczekiwania
             </p>
           </div>
 
@@ -121,33 +111,33 @@ const Home = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Our Premium Services
+              Nasze Usługi Premium
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              From classic manicures to intricate nail art, we offer everything you need
+              Od klasycznego manicure po skomplikowany nail art - oferujemy wszystko czego potrzebujesz
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               {
-                title: 'Classic Manicure',
-                price: 'Starting at $35',
+                title: 'Klasyczny Manicure',
+                price: 'Od 150 zł',
                 image: 'https://images.pexels.com/photos/3997991/pexels-photo-3997991.jpeg?auto=compress&cs=tinysrgb&w=400'
               },
               {
-                title: 'Gel Polish',
-                price: 'Starting at $45',
+                title: 'Lakier Hybrydowy',
+                price: 'Od 180 zł',
                 image: 'https://images.pexels.com/photos/3997386/pexels-photo-3997386.jpeg?auto=compress&cs=tinysrgb&w=400'
               },
               {
                 title: 'Nail Art',
-                price: 'Starting at $55',
+                price: 'Od 220 zł',
                 image: 'https://images.pexels.com/photos/3997982/pexels-photo-3997982.jpeg?auto=compress&cs=tinysrgb&w=400'
               },
               {
                 title: 'Spa Pedicure',
-                price: 'Starting at $50',
+                price: 'Od 200 zł',
                 image: 'https://images.pexels.com/photos/3997348/pexels-photo-3997348.jpeg?auto=compress&cs=tinysrgb&w=400'
               }
             ].map((service, index) => (
@@ -170,7 +160,7 @@ const Home = () => {
               to="/services"
               className="inline-flex bg-pink-500 text-white px-8 py-3 rounded-full font-semibold hover:bg-pink-600 transition-colors duration-200"
             >
-              View All Services
+              Zobacz Wszystkie Usługi
             </Link>
           </div>
         </div>
@@ -181,10 +171,10 @@ const Home = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              What Our Clients Say
+              Co Mówią Nasze Klientki
             </h2>
             <p className="text-xl text-gray-600">
-              Don't just take our word for it - hear from our satisfied customers
+              Nie wierz nam na słowo - posłuchaj naszych zadowolonych klientek
             </p>
           </div>
 
@@ -208,16 +198,16 @@ const Home = () => {
       <section className="py-20 bg-pink-500 text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Ready to Transform Your Nails?
+            Gotowa na Przemianę Swoich Paznokci?
           </h2>
           <p className="text-xl mb-8 text-pink-100">
-            Book your appointment today and experience the Luxe Nails difference
+            Zarezerwuj wizytę już dziś i doświadcz różnicy Luxe Nails
           </p>
           <Link
             to="/booking"
             className="inline-flex bg-white text-pink-500 px-8 py-4 rounded-full font-semibold text-lg hover:bg-gray-100 transition-colors duration-200"
           >
-            Book Your Appointment
+            Zarezerwuj Wizytę
           </Link>
         </div>
       </section>
