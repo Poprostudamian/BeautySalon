@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { MapPin, Phone, Mail, Clock, MessageSquare, Send } from 'lucide-react';
+import { Phone, MapPin, Clock, Mail, MessageSquare } from 'lucide-react';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -8,10 +8,10 @@ const Contact = () => {
     subject: '',
     message: ''
   });
-
+  
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
@@ -21,28 +21,32 @@ const Contact = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Contact form submitted:', formData);
+    console.log('Form submitted:', formData);
     setIsSubmitted(true);
-    setTimeout(() => setIsSubmitted(false), 3000);
+    
+    // Reset form after 3 seconds
+    setTimeout(() => {
+      setIsSubmitted(false);
+      setFormData({
+        name: '',
+        email: '',
+        subject: '',
+        message: ''
+      });
+    }, 3000);
   };
-
-  const businessHours = [
-    { day: 'Monday - Friday', hours: '9:00 AM - 7:00 PM' },
-    { day: 'Saturday', hours: '9:00 AM - 7:00 PM' },
-    { day: 'Sunday', hours: '10:00 AM - 6:00 PM' }
-  ];
 
   return (
     <div className="pt-20">
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-pink-50 to-purple-50 py-16">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Contact Us
+            Skontaktuj Się z Nami
           </h1>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Have questions or want to schedule an appointment? We're here to help! 
-            Reach out to us and we'll get back to you as soon as possible.
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Masz pytania? Chcesz zarezerwować wizytę? Jesteśmy tutaj, aby pomóc! 
+            Skontaktuj się z nami w dowolny sposób - z radością odpowiemy na wszystkie Twoje pytania.
           </p>
         </div>
       </section>
@@ -53,70 +57,51 @@ const Contact = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Contact Information */}
             <div>
-              <h2 className="text-3xl font-bold text-gray-900 mb-8">Get in Touch</h2>
+              <h2 className="text-2xl font-semibold text-gray-900 mb-8">Informacje Kontaktowe</h2>
               
-              <div className="space-y-8">
+              <div className="space-y-6">
                 <div className="flex items-start space-x-4">
-                  <div className="flex-shrink-0">
-                    <MapPin className="h-6 w-6 text-pink-500 mt-1" />
+                  <div className="bg-pink-100 p-3 rounded-full">
+                    <Phone className="h-6 w-6 text-pink-500" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold text-gray-900">Visit Our Salon</h3>
-                    <p className="text-gray-600 mt-1">
-                      123 Beauty Avenue<br />
-                      Downtown District<br />
-                      City, ST 12345
-                    </p>
+                    <h3 className="font-semibold text-gray-900 mb-1">Telefon</h3>
+                    <p className="text-gray-600">(22) 123-4567</p>
+                    <p className="text-sm text-gray-500">Pon-Sob: 9:00-19:00, Nie: 10:00-18:00</p>
                   </div>
                 </div>
 
                 <div className="flex items-start space-x-4">
-                  <div className="flex-shrink-0">
-                    <Phone className="h-6 w-6 text-pink-500 mt-1" />
+                  <div className="bg-pink-100 p-3 rounded-full">
+                    <MapPin className="h-6 w-6 text-pink-500" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold text-gray-900">Call Us</h3>
-                    <p className="text-gray-600 mt-1">
-                      <a href="tel:+15551234567" className="hover:text-pink-500 transition-colors duration-200">
-                        (555) 123-4567
-                      </a>
-                    </p>
-                    <p className="text-sm text-gray-500 mt-1">
-                      For appointments and inquiries
-                    </p>
+                    <h3 className="font-semibold text-gray-900 mb-1">Adres</h3>
+                    <p className="text-gray-600">ul. Piękna 123</p>
+                    <p className="text-gray-600">00-001 Warszawa</p>
                   </div>
                 </div>
 
                 <div className="flex items-start space-x-4">
-                  <div className="flex-shrink-0">
-                    <Mail className="h-6 w-6 text-pink-500 mt-1" />
+                  <div className="bg-pink-100 p-3 rounded-full">
+                    <Mail className="h-6 w-6 text-pink-500" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold text-gray-900">Email Us</h3>
-                    <p className="text-gray-600 mt-1">
-                      <a href="mailto:info@luxenails.com" className="hover:text-pink-500 transition-colors duration-200">
-                        info@luxenails.com
-                      </a>
-                    </p>
-                    <p className="text-sm text-gray-500 mt-1">
-                      We'll respond within 24 hours
-                    </p>
+                    <h3 className="font-semibold text-gray-900 mb-1">Email</h3>
+                    <p className="text-gray-600">info@luxenails.pl</p>
+                    <p className="text-sm text-gray-500">Odpowiadamy w ciągu 24 godzin</p>
                   </div>
                 </div>
 
                 <div className="flex items-start space-x-4">
-                  <div className="flex-shrink-0">
-                    <Clock className="h-6 w-6 text-pink-500 mt-1" />
+                  <div className="bg-pink-100 p-3 rounded-full">
+                    <Clock className="h-6 w-6 text-pink-500" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold text-gray-900">Business Hours</h3>
-                    <div className="mt-2 space-y-1">
-                      {businessHours.map((schedule, index) => (
-                        <div key={index} className="flex justify-between">
-                          <span className="text-gray-600">{schedule.day}</span>
-                          <span className="text-gray-900 font-medium">{schedule.hours}</span>
-                        </div>
-                      ))}
+                    <h3 className="font-semibold text-gray-900 mb-1">Godziny Otwarcia</h3>
+                    <div className="text-gray-600">
+                      <p>Poniedziałek - Sobota: 9:00 - 19:00</p>
+                      <p>Niedziela: 10:00 - 18:00</p>
                     </div>
                   </div>
                 </div>
@@ -124,19 +109,19 @@ const Contact = () => {
 
               {/* Quick Actions */}
               <div className="mt-12 p-6 bg-pink-50 rounded-xl">
-                <h3 className="text-lg font-semibold text-gray-900 mb-4">Quick Actions</h3>
+                <h3 className="text-lg font-semibold text-gray-900 mb-4">Szybkie Akcje</h3>
                 <div className="space-y-3">
                   <a
                     href="/booking"
                     className="block w-full bg-pink-500 text-white text-center py-3 px-4 rounded-lg font-semibold hover:bg-pink-600 transition-colors duration-200"
                   >
-                    Book an Appointment
+                    Zarezerwuj Wizytę
                   </a>
                   <a
-                    href="tel:+15551234567"
+                    href="tel:+48221234567"
                     className="block w-full border-2 border-pink-500 text-pink-500 text-center py-3 px-4 rounded-lg font-semibold hover:bg-pink-500 hover:text-white transition-colors duration-200"
                   >
-                    Call Now
+                    Zadzwoń Teraz
                   </a>
                 </div>
               </div>
@@ -147,13 +132,13 @@ const Contact = () => {
               <div className="bg-gray-50 rounded-2xl p-8">
                 <h2 className="text-2xl font-semibold text-gray-900 mb-6 flex items-center">
                   <MessageSquare className="h-6 w-6 text-pink-500 mr-3" />
-                  Send Us a Message
+                  Wyślij Nam Wiadomość
                 </h2>
 
                 {isSubmitted && (
                   <div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-lg">
                     <p className="text-green-800 text-center font-medium">
-                      Thank you for your message! We'll get back to you soon.
+                      Dziękujemy za wiadomość! Skontaktujemy się z Tobą wkrótce.
                     </p>
                   </div>
                 )}
@@ -161,7 +146,7 @@ const Contact = () => {
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div>
                     <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
-                      Full Name *
+                      Imię i Nazwisko *
                     </label>
                     <input
                       type="text"
@@ -171,13 +156,13 @@ const Contact = () => {
                       onChange={handleInputChange}
                       required
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-pink-500 focus:border-pink-500"
-                      placeholder="Enter your full name"
+                      placeholder="Wprowadź swoje imię i nazwisko"
                     />
                   </div>
 
                   <div>
                     <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-                      Email Address *
+                      Adres Email *
                     </label>
                     <input
                       type="email"
@@ -187,13 +172,13 @@ const Contact = () => {
                       onChange={handleInputChange}
                       required
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-pink-500 focus:border-pink-500"
-                      placeholder="your.email@example.com"
+                      placeholder="twoj.email@przykład.com"
                     />
                   </div>
 
                   <div>
                     <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-2">
-                      Subject *
+                      Temat *
                     </label>
                     <select
                       id="subject"
@@ -203,38 +188,37 @@ const Contact = () => {
                       required
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-pink-500 focus:border-pink-500"
                     >
-                      <option value="">Select a subject</option>
-                      <option value="appointment">Appointment Inquiry</option>
-                      <option value="services">Questions About Services</option>
-                      <option value="pricing">Pricing Information</option>
-                      <option value="membership">VIP Membership</option>
-                      <option value="feedback">Feedback or Complaint</option>
-                      <option value="other">Other</option>
+                      <option value="">Wybierz temat</option>
+                      <option value="appointment">Zapytanie o Wizytę</option>
+                      <option value="services">Pytania o Usługi</option>
+                      <option value="pricing">Informacje o Cenach</option>
+                      <option value="membership">Członkostwo VIP</option>
+                      <option value="feedback">Opinia lub Skarga</option>
+                      <option value="other">Inne</option>
                     </select>
                   </div>
 
                   <div>
                     <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
-                      Message *
+                      Wiadomość *
                     </label>
                     <textarea
                       id="message"
                       name="message"
-                      rows={6}
+                      rows={5}
                       value={formData.message}
                       onChange={handleInputChange}
                       required
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-pink-500 focus:border-pink-500"
-                      placeholder="Tell us how we can help you..."
+                      placeholder="Napisz swoją wiadomość tutaj..."
                     />
                   </div>
 
                   <button
                     type="submit"
-                    className="w-full bg-pink-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-pink-600 transition-colors duration-200 flex items-center justify-center"
+                    className="w-full bg-pink-500 text-white py-3 px-6 rounded-lg font-semibold hover:bg-pink-600 transition-colors duration-200"
                   >
-                    <Send className="h-5 w-5 mr-2" />
-                    Send Message
+                    Wyślij Wiadomość
                   </button>
                 </form>
               </div>
@@ -247,79 +231,22 @@ const Contact = () => {
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Find Us</h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              We're conveniently located in the heart of downtown, with easy parking and public transportation access.
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">Znajdź Nas</h2>
+            <p className="text-xl text-gray-600">
+              Przyjdź i zobacz nasz piękny salon w centrum Warszawy
             </p>
           </div>
-
+          
           <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
-            <div className="aspect-w-16 aspect-h-9 bg-gray-200 flex items-center justify-center">
+            <div className="aspect-w-16 aspect-h-9 bg-gray-200 flex items-center justify-center text-gray-500">
               <div className="text-center p-8">
-                <MapPin className="h-16 w-16 text-pink-500 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Interactive Map</h3>
-                <p className="text-gray-600 mb-4">
-                  123 Beauty Avenue, Downtown District, City, ST 12345
+                <MapPin className="h-12 w-12 mx-auto mb-4 text-pink-500" />
+                <p className="text-lg font-semibold text-gray-900 mb-2">Luxe Nails</p>
+                <p className="text-gray-600">ul. Piękna 123, 00-001 Warszawa</p>
+                <p className="text-sm text-gray-500 mt-4">
+                  Wbudowana mapa będzie dostępna w pełnej wersji strony
                 </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <a
-                    href="https://maps.google.com/?q=123+Beauty+Avenue+Downtown+District+City+ST+12345"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex bg-pink-500 text-white px-6 py-2 rounded-full font-semibold hover:bg-pink-600 transition-colors duration-200"
-                  >
-                    Open in Google Maps
-                  </a>
-                  <a
-                    href="https://maps.apple.com/?q=123+Beauty+Avenue+Downtown+District+City+ST+12345"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex border-2 border-pink-500 text-pink-500 px-6 py-2 rounded-full font-semibold hover:bg-pink-500 hover:text-white transition-colors duration-200"
-                  >
-                    Open in Apple Maps
-                  </a>
-                </div>
               </div>
-            </div>
-          </div>
-
-          {/* Directions */}
-          <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center">
-              <div className="w-16 h-16 bg-pink-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg className="w-8 h-8 text-pink-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
-                </svg>
-              </div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">By Car</h3>
-              <p className="text-gray-600 text-sm">
-                Free parking available in our lot. Street parking also available with 2-hour limits.
-              </p>
-            </div>
-            
-            <div className="text-center">
-              <div className="w-16 h-16 bg-pink-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg className="w-8 h-8 text-pink-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path>
-                </svg>
-              </div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">Public Transit</h3>
-              <p className="text-gray-600 text-sm">
-                Bus lines 12, 34, and 56 stop within two blocks. Metro station is a 5-minute walk.
-              </p>
-            </div>
-            
-            <div className="text-center">
-              <div className="w-16 h-16 bg-pink-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg className="w-8 h-8 text-pink-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
-                </svg>
-              </div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">Walking/Cycling</h3>
-              <p className="text-gray-600 text-sm">
-                Bike racks available outside. Walking distance from downtown hotels and shopping.
-              </p>
             </div>
           </div>
         </div>
