@@ -142,7 +142,7 @@ const About = () => {
                 <img
                   src={member.image}
                   alt={member.name}
-                  className="w-32 h-32 rounded-full mx-auto mb-6 object-cover"
+                  className="w-32 h-32 mx-auto mb-6 object-cover"
                 />
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">{member.name}</h3>
                 <p className="text-pink-500 font-semibold mb-2">{member.role}</p>
