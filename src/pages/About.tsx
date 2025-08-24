@@ -69,7 +69,7 @@ const About = () => {
             <div className="relative">
               <img
                 src="https://images.pexels.com/photos/3993449/pexels-photo-3993449.jpeg?auto=compress&cs=tinysrgb&w=600"
-                alt="Salon Luxe Nails"
+                alt="Salon Vip Nails"
                 className="rounded-2xl shadow-2xl"
               />
             </div>
