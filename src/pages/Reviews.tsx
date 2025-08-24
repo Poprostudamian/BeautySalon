@@ -40,7 +40,7 @@ const Reviews = () => {
       date: '28 lipca 2025',
       rating: 5,
       service: 'Francuski Manicure',
-      review: 'Klasyczny francuski manicure w wykonaniu Luxe Nails to prawdziwa perfekcja! Linie są idealne, lakier trwały, a całe doświadczenie było bardzo przyjemne. Personel jest kompetentny i miły.',
+      review: 'Klasyczny francuski manicure w wykonaniu Vip Nails to prawdziwa perfekcja! Linie są idealne, lakier trwały, a całe doświadczenie było bardzo przyjemne. Personel jest kompetentny i miły.',
       helpful: 9
     },
     {
