@@ -51,7 +51,7 @@ const Home = () => {
                 <span className="text-pink-500 block">Którą Zasługujesz</span>
               </h1>
               <p className="text-xl text-gray-600 mb-8">
-                Doświadcz najlepszego w sztuce paznokci i rozpieszczaniu w Luxe Nails. 
+                Doświadcz najlepszego w sztuce paznokci i rozpieszczaniu w Vip Nails. 
                 Nasze ekspertki używają produktów premium, aby stworzyć oszałamiające, trwałe rezultaty.
               </p>
               <div className="flex space-x-4">
