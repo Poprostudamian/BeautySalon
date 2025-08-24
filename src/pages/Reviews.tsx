@@ -66,7 +66,7 @@ const Reviews = () => {
             Opinie Klientek
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-            Przeczytaj, co mówią nasze zadowolone klientki o swoich doświadczeniach w Luxe Nails
+            Przeczytaj, co mówią nasze zadowolone klientki o swoich doświadczeniach w Vip Nails
           </p>
           
           {/* Rating Summary */}
