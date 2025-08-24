@@ -70,7 +70,7 @@ const Booking = () => {
           </div>
           <h2 className="text-2xl font-bold text-gray-900 mb-4">Rezerwacja Potwierdzona!</h2>
           <p className="text-gray-600 mb-6">
-            Dziękujemy za wybór Luxe Nails! Otrzymaliśmy Twoją prośbę o wizytę i skontaktujemy się z Tobą w ciągu 24 godzin, aby potwierdzić rezerwację.
+            Dziękujemy za wybór Vip Nails! Otrzymaliśmy Twoją prośbę o wizytę i skontaktujemy się z Tobą w ciągu 24 godzin, aby potwierdzić rezerwację.
           </p>
           <div className="space-y-4">
             <div className="bg-gray-50 rounded-lg p-4">
