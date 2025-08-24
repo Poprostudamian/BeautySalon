@@ -53,7 +53,7 @@ const About = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-                O Luxe Nails
+                O Vip Nails
               </h1>
               <p className="text-xl text-gray-600 mb-8">
                 Od 2018 roku jesteśmy wiodącym salonem paznokci w Warszawie, 
