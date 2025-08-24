@@ -134,7 +134,7 @@ const Reviews = () => {
             Podziel Się Swoim Doświadczeniem
           </h2>
           <p className="text-xl text-pink-100 mb-8">
-            Chcielibyśmy usłyszeć o Twojej wizycie w Luxe Nails. Twoja opinia pomaga nam lepiej Cię obsługiwać!
+            Chcielibyśmy usłyszeć o Twojej wizycie w Vip Nails. Twoja opinia pomaga nam lepiej Cię obsługiwać!
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
