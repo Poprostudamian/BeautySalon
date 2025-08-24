@@ -201,7 +201,7 @@ const Home = () => {
             Gotowa na Przemianę Swoich Paznokci?
           </h2>
           <p className="text-xl mb-8 text-pink-100">
-            Zarezerwuj wizytę już dziś i doświadcz różnicy Luxe Nails
+            Zarezerwuj wizytę już dziś i doświadcz różnicy Vip Nails
           </p>
           <Link
             to="/booking"
