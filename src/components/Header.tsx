@@ -73,7 +73,7 @@ const Header = () => {
           <div className="flex items-center">
             <Link to="/" className="flex items-center space-x-2">
               <Sparkles className="h-8 w-8 text-pink-500" />
-              <span className="text-2xl font-bold text-gray-900">Luxe Nails</span>
+              <span className="text-2xl font-bold text-gray-900">Vip Nails</span>
             </Link>
           </div>
 
