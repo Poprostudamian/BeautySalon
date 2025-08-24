@@ -241,7 +241,7 @@ const Contact = () => {
             <div className="aspect-w-16 aspect-h-9 bg-gray-200 flex items-center justify-center text-gray-500">
               <div className="text-center p-8">
                 <MapPin className="h-12 w-12 mx-auto mb-4 text-pink-500" />
-                <p className="text-lg font-semibold text-gray-900 mb-2">Luxe Nails</p>
+                <p className="text-lg font-semibold text-gray-900 mb-2">Vip Nails</p>
                 <p className="text-gray-600">ul. Piękna 123, 00-001 Warszawa</p>
                 <p className="text-sm text-gray-500 mt-4">
                   Wbudowana mapa będzie dostępna w pełnej wersji strony
