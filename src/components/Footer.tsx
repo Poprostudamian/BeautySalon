@@ -10,7 +10,7 @@ const Footer = () => {
           <div className="md:col-span-2">
             <div className="flex items-center space-x-2 mb-4">
               <Sparkles className="h-8 w-8 text-pink-400" />
-              <span className="text-2xl font-bold">Luxe Nails</span>
+              <span className="text-2xl font-bold">Vip Nails</span>
             </div>
             <p className="text-gray-300 mb-6 max-w-md">
               Zapewniamy wyjątkową obsługę w relaksującym, czystym środowisku 
