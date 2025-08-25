@@ -61,7 +61,7 @@ const Footer = () => {
 
         <div className="border-t border-gray-800 mt-8 pt-8 text-center">
           <p className="text-gray-300">
-            © 2025 Luxe Nails. Wszelkie prawa zastrzeżone. | Profesjonalna pielęgnacja paznokci z certyfikowanymi specjalistkami.
+            © 2025 Vip Nails. Wszelkie prawa zastrzeżone. | Profesjonalna pielęgnacja paznokci z certyfikowanymi specjalistkami.
           </p>
         </div>
       </div>
