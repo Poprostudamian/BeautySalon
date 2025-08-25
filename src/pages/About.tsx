@@ -83,7 +83,7 @@ const About = () => {
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Nasza Historia</h2>
             <p className="text-lg text-gray-600 leading-relaxed">
-              Luxe Nails zostało założone w 2018 roku z prostą misją: zapewnienie luksusowej pielęgnacji paznokci 
+              Vip Nails zostało założone w 2018 roku z prostą misją: zapewnienie luksusowej pielęgnacji paznokci 
               w przystępnej cenie. Nasza założycielka, Anna Kowalczyk, z ponad 12-letnim doświadczeniem w branży 
               beauty, marzyła o stworzeniu miejsca, gdzie każda klientka czuje się wyjątkowo.
             </p>
